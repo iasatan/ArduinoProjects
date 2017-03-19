@@ -35,33 +35,28 @@ void migrate(Servo servo1, byte newPos1, Servo servo2, byte newPos2, byte wait) 
 	while (true) {
 		if (pos1 != newPos1) {
 			delay(wait / 2);
-			if (pos1 <= newPos1) {
+			if (pos1 <= newPos1) 
 				pos1++;
-			}
-			else if (pos1 > newPos1) {
+			
+			else if (pos1 > newPos1) 
 				pos1--;
-			}
+			
 			servo1.write(pos1);
 		}
-		else{
+		else
 			delay(wait / 2);
-		}
 		if (pos2 != newPos2) {
 			delay(wait / 2);
-			if (pos2 <= newPos2) {
+			if (pos2 <= newPos2) 
 				pos2++;
-			}
-			else if (pos2 > newPos2) {
+			else if (pos2 > newPos2) 
 				pos2--;
-			}
 			servo2.write(pos2);
 		}
-		else {
+		else 
 			delay(wait / 2);
-		}
-		if (pos1 == newPos1 && pos2 == newPos2) {
+		if (pos1 == newPos1 && pos2 == newPos2)
 			break;
-		}
 	}
 }
 /*************************************************************************
@@ -74,46 +69,37 @@ void migrate(Servo servo1, byte newPos1, Servo servo2, byte newPos2, Servo servo
 	while (true) {
 		if (pos1 != newPos1) {
 			delay(wait / 3);
-			if (pos1 < newPos1) {
+			if (pos1 < newPos1) 
 				pos1++;
-			}
-			else if (pos1 > newPos1) {
+			else if (pos1 > newPos1) 
 				pos1--;
-			}
 			servo1.write(pos1);
 		}
-		else {
+		else 
 			delay(wait / 3);
-		}
 		if(pos2 != newPos2) {
 			delay(wait / 3);
-			if (pos2 < newPos2) {
+			if (pos2 < newPos2)
 				pos2++;
-			}
-			else if (pos2 > newPos2) {
+			else if (pos2 > newPos2) 
 				pos2--;
-			}
 			servo2.write(pos2);
 		}
-		else {
+		else 
 			delay(wait / 3);
-		}
 		if (pos3 != newPos3) {
 			delay(wait / 3);
-			if (pos3 < newPos3) {
+			if (pos3 < newPos3)
 				pos3++;
-			}
-			else if (pos3 > newPos3) {
+			else if (pos3 > newPos3)
 				pos3--;
-			}
+			
 			servo3.write(pos3);
 		}
-		else {
+		else
 			delay(wait / 3);
-		}
-		if (pos1 == newPos1 && pos2 == newPos2 && pos3 == newPos3) {
+		if (pos1 == newPos1 && pos2 == newPos2 && pos3 == newPos3)
 			break;
-		}
 	}
 }
 
@@ -129,58 +115,45 @@ void migrate(Servo servo1, byte newPos1, Servo servo2, byte newPos2, Servo servo
 	while (true) {
 		if (pos1 != newPos1) {
 			delay(wait / 4);
-			if (pos1 < newPos1) {
+			if (pos1 < newPos1) 
 				pos1++;
-			}
-			else if (pos1 > newPos1) {
+			else if (pos1 > newPos1)
 				pos1--;
-			}
 			servo1.write(pos1);
 		}
-		else {
+		else 
 			delay(wait / 4);
-		}
 		if(pos2 != newPos2) {
 			delay(wait / 4);
-			if (pos2 < newPos2) {
+			if (pos2 < newPos2)
 				pos2++;
-			}
-			else if (pos2 > newPos2) {
+			else if (pos2 > newPos2)
 				pos2--;
-			}
 			servo2.write(pos2);
 		}
-		else {
+		else 
 			delay(wait / 4);
-		}
 		if (pos3 != newPos3) {
 			delay(wait / 4);
-			if (pos3 < newPos3) {
+			if (pos3 < newPos3)
 				pos3++;
-			}
-			else if (pos3 > newPos3) {
+			else if (pos3 > newPos3)
 				pos3--;
-			}
 			servo3.write(pos3);
 		}
-		else {
+		else
 			delay(wait / 4);
-		}
 		if (pos4 != newPos4) {
 			delay(wait / 4);
-			if (pos4 < newPos4) {
+			if (pos4 < newPos4)
 				pos4++;
-			}
-			else if (pos4 > newPos4) {
+			else if (pos4 > newPos4)
 				pos4--;
-			}
 			servo4.write(pos4);
 		}
-		else {
+		else 
 			delay(wait / 4);
-		}
-		if (pos1 == newPos1 && pos2 == newPos2 && pos3 == newPos3 && pos4 == newPos4) {
+		if (pos1 == newPos1 && pos2 == newPos2 && pos3 == newPos3 && pos4 == newPos4)
 			break;
-		}
 	}
 }
