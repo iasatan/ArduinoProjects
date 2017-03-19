@@ -27,7 +27,7 @@ void migrate(Servo myServo, byte newPos, byte wait){
 	}
 }
 /*************************************************************************
-Moves a servo to "newPos"
+Moves the servos to the newPos-es
 *************************************************************************/
 void migrate(Servo servo1, byte newPos1, Servo servo2, byte newPos2, byte wait) {
 	byte pos1 = servo1.read(); //reads the current position of the servo
@@ -65,7 +65,7 @@ void migrate(Servo servo1, byte newPos1, Servo servo2, byte newPos2, byte wait) 
 	}
 }
 /*************************************************************************
-Moves a servo to "newPos"
+Moves the servos to the newPos-es
 *************************************************************************/
 void migrate(Servo servo1, byte newPos1, Servo servo2, byte newPos2, Servo servo3, byte newPos3, byte wait) {
 	byte pos1 = servo1.read(); //reads the current position of the servo
@@ -118,7 +118,7 @@ void migrate(Servo servo1, byte newPos1, Servo servo2, byte newPos2, Servo servo
 }
 
 /*************************************************************************
-Moves a servo to "newPos"
+Moves the servos to the newPos-es
 *************************************************************************/
 
 void migrate(Servo servo1, byte newPos1, Servo servo2, byte newPos2, Servo servo3, byte newPos3, Servo servo4, byte newPos4, byte wait) {
