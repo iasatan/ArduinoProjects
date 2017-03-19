@@ -90,14 +90,13 @@ void loop()
         Serial.println("highFive");
         highFive(serialPos);
         break;
-      case 'q':
-        Serial.println("test");
-        migrate(panServo, 0, handServo, 90, 10);
   }
   serialServo=' ';
   delay(100);
 }
-
+/*************************************************************************
+Moves the arm int a resting position
+*************************************************************************/
 void rest(){
   migrate(handServo, 180, elbowServo, 180, tiltServo, 180, panServo, 90, 15);
   delay(100);
@@ -106,7 +105,9 @@ void rest(){
   elbowServo.detach();
   handServo.detach();
 }
-
+/***************************************************************************
+Makes masturbating movement, only as a joke, not recommended for actual use 
+***************************************************************************/
 void masturbate(byte times){
   tiltServo.write(90);
   for (int l = 0; l<times; l++) {
@@ -114,7 +115,9 @@ void masturbate(byte times){
     migrate(handServo, 40, elbowServo, 130, 18);
   }
 }
-
+/*************************************************************************
+Make waveing movement 
+*************************************************************************/
 void wave(byte times){
   migrate(panServo, 0, elbowServo, 20, 10);
   //migrate(panServo, 0, 10);
@@ -124,7 +127,9 @@ void wave(byte times){
     migrate(handServo, 130, 15);
   }
 }
-
+/*************************************************************************
+Shakes the arm in a denying way
+*************************************************************************/
 void shake(byte times){
   migrate(handServo, 180, 10);
   for (int i = 0; i<times; i++) {
@@ -134,7 +139,9 @@ void shake(byte times){
   }
   migrate(panServo, 100, 10);
 }
-
+/*************************************************************************
+Gives you a highfive after a few shakes
+*************************************************************************/
 void highFive(byte times){
   shake(times);
   migrate(tiltServo, 180, 10);
@@ -147,7 +154,9 @@ void highFive(byte times){
   delay(1000);
   initServos();
 }
-
+/*************************************************************************
+Attaches and moves the servos to the staring position
+*************************************************************************/
 void initServos(){
   clawServo.attach(9);
   handServo.attach(8);
