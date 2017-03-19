@@ -90,10 +90,6 @@ void loop()
         Serial.println("highFive");
         highFive(serialPos);
         break;
-      case 'n': //Nazi ArmSwing
-        Serial.println("armSwing");
-        armSwing();
-        break;
       case 'q':
         Serial.println("test");
         migrate(panServo, 0, handServo, 90, 10);
@@ -150,15 +146,6 @@ void highFive(byte times){
   migrate(tiltServo, 50, 25);
   delay(1000);
   initServos();
-}
-
-void armSwing(){
-  migrate(panServo, 0, 10);
-  migrate(tiltServo, 0, 10);
-  migrate(elbowServo, 0, 10);
-  migrate(handServo, 90, 10);
-  migrate(elbowServo, 10, 10);
-  migrate(tiltServo, 60, 10);
 }
 
 void initServos(){
