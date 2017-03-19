@@ -9,7 +9,6 @@ Servo hor;
 byte i;
 byte wait;
 byte pos;
-short megarand;
 byte rand1;
 byte rand2;
 
