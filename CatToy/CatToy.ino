@@ -13,7 +13,9 @@ byte rand1;
 byte rand2;
 
 void setup(){}
-
+/*************************************************************************
+ Moves a servo to "newPos"
+*************************************************************************/
 void migrate(Servo &myServo, int newPos){
   wait=random(0,20);
   pos = myServo.read();
@@ -22,14 +24,14 @@ void migrate(Servo &myServo, int newPos){
       myServo.write(i);
       delay(wait); 
     }
-    myServo.detach();
+    myServo.detach();//noise reduction
   } 
   else   { 
     for (i=pos; i > newPos; i--)    { 
       myServo.write(i);
       delay(wait);  
     }
-    myServo.detach();
+    myServo.detach(); //noise reduction
   }
 }
   
